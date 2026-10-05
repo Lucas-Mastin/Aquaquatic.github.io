@@ -1,71 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="icon" type="image/png" href="Untitled_Artwork 4.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
 
+    * {
+      box-sizing: border-box;
+    }
 
-<title>My Porfolio</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');.autour-one-regular {
-  font-family: "Autour One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #f3f2f8 0%, #e7edea 100%);
+      color: #1f1f1f;
+    }
 
-ul li {
-  float: left;
-}
+    header {
+      background-color: #03373A;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
 
-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    header h1 {
+      margin: 0;
+      color: #dac4d0;
+      font-family: "Autour One", cursive;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
 
-ul li a:hover {
-  background-color: #111111;
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-img {
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 350px;
-  height: auto;
-  border-radius: 5%; /*round corners*/
-  border: 7px solid #48ccc5;
-}
+    .navbar {
+      background: #333333;
+    }
 
-</style>
-<link rel="icon" type="image/png" herf="Untitled_Artwork 4.png">
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      transition: background-color 0.2s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #111111;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem 2rem;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 35%) minmax(0, 65%);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .profile-box,
+    .info-box {
+      border-radius: 18px;
+      padding: 2rem;
+      min-height: 320px;
+    }
+
+    .profile-box {
+      background-color: #757474;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-box img {
+      display: block;
+      width: min(100%, 300px);
+      height: auto;
+      border-radius: 15px;
+      border: 7px solid #48ccc5;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-box {
+      background-color: #9695b0;
+    }
+
+    .info-box h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-family: "Autour One", cursive;
+      font-size: 1.5rem;
+      background-color: violet;
+      display: inline-block;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+    }
+
+    .info-box p {
+      margin: 0;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 700px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-box,
+      .info-box {
+        min-height: auto;
+      }
+    }
+  </style>
 </head>
-
-
 <body>
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
 
-<header style="background-color:03373A;
-    min-height:5%;
-    padding-top: 5%;
-    padding-bottom: 5%;">
-    <h1 style="color:#dac4d0;font-family:Autour One; font-size:200%; text-align:center;">My Portfolio</h1>
-</header>
-<nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -73,42 +139,23 @@ img {
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
-<section><h1></h1></section>
-<aside style="
-  float: left;
-  padding: 30px;
-  width: 35%;
-  background-color: #757474;
-  height: 300px;">
-  <h1 style="background-color: aliceblue;">><b></b></h1>
-  <p> <img scr="Untitled_Artwork 4.png"
-  alt="web icon picture"></p>
 
-</aside>
-<aside style="
-  float: right;
-  padding: 30px;
-  width: 60%;
-  background-color: #9695b0;
-  height: 300px;">
-  <h1 style="background-color:violet;font-family:Autour One;font-size: 1.125em;"><b>About Me</b></h1>
-  <p>Hello, I am a student at PTECH and FLCC. I'm currently in the Web and Mobile Developemnt pathway.
-    Things I enjoy are art, gaming, reading, and hiking. I enjoy meeting new people and learning new things.
-    Some things that I enjoy learning are leanguages, cultures, history, and mostly everything. I am also a really
-    flexible person so if something needs to be changed, then it will be changed!
-  </p>
-  </aside>
-<section::after style="
-  content: '';
-  display: table;
-  clear: both;">
-  <p>Hello!</p>
-  </section::after>
+  <main class="container">
+    <section class="about-layout" aria-label="About section">
+      <aside class="profile-box">
+        <img src="Untitled_Artwork 4.png" alt="Profile illustration">
+      </aside>
 
+      <aside class="info-box">
+        <h2>About Me</h2>
+        <p>
+          Hello, I am a student at PTECH and FLCC. I'm currently in the Web and Mobile Development pathway.
+          Things I enjoy are art, gaming, reading, and hiking. I enjoy meeting new people and learning new things.
+          Some things that I enjoy learning are languages, cultures, history, and mostly everything. I am also a really
+          flexible person, so if something needs to be changed, then it will be changed!
+        </p>
+      </aside>
+    </section>
+  </main>
 </body>
-
-
-
-
-
 </html>
